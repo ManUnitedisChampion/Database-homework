@@ -39,9 +39,9 @@ CREATE TABLE stay_bills (
     bill_id VARCHAR(5) PRIMARY KEY,
     booking_id VARCHAR(4),
     checkout_date DATETIME NOT NULL,
-    room_charge FLOAT NOT NULL,
-    extra_charge FLOAT,
-    total_charge FLOAT NOT NULL,
+    room_charge DECIMAL NOT NULL,
+    extra_charge DECIMAL,
+    total_charge DECIMAL NOT NULL,
 
     FOREIGN KEY (booking_id) REFERENCES bookings(booking_id)
 );
@@ -56,3 +56,4 @@ CREATE TABLE payments (
     FOREIGN KEY (booking_id) REFERENCES bookings(booking_id)
 );
 
+DROP DATABASE hotel_mini

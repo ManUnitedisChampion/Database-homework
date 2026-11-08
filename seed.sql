@@ -46,7 +46,7 @@ INSERT INTO bookings (booking_id, guests_id, room_id, checkin_date, status, plan
 
 ('B011', 'G008', 'R003', '2025-01-25', 'Pending',   '2025-01-28'), -- Quý I/2025 (Pending)
 ('B012', 'G003', 'R005', '2025-07-10', 'Pending',   '2025-07-15'), -- Ngoài Quý I/2025 (Pending)
-('B013', 'G009', 'R001', '2025-04-02', 'Cancelled', '2025-04-05'); -- Năm 2025 (Cancelled)
+('B013', 'G009', 'R001', '2025-04-02', 'Canceled', '2025-04-05'); -- Năm 2025 (Cancelled)
 
 
 INSERT INTO stay_bills (bill_id, booking_id, checkout_date, room_charge, extra_charge, total_charge) VALUES
@@ -66,4 +66,12 @@ INSERT INTO payments (payment_id, booking_id, amount, payment_date, method) VALU
 ('P002', 'B001',  700000.00, '2025-01-08', 'BankTransfer'),
 ('P003', 'B002', 1000000.00, '2025-01-18', 'Card'),
 ('P004', 'B003', 1000000.00, '2025-02-12', 'Cash');
+
+INSERT INTO payments (payment_id, booking_id, amount, payment_date, method) VALUES
+('P005', 'B003',  500000.00, '2025-02-14', 'BankTransfer'),
+('P006', 'B004', 1200000.00, '2025-02-20', 'Card'),
+('P007', 'B004',  800000.00, '2025-02-25', 'Cash'),
+('P008', 'B005', 1500000.00, '2025-03-03', 'BankTransfer'),
+('P009', 'B006',  900000.00, '2025-03-10', 'Card'),
+('P010', 'B006',  600000.00, '2025-03-15', 'Cash');
 

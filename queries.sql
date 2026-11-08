@@ -76,7 +76,7 @@ FROM
 GROUP BY
     g.guests_id,
     g.full_name
-ORDER BY g.full_name ASC -- 6. Tính tổng số tiền từng khách lưu trú đã thanh toán trong năm 2025 theo payment_date; hiển thị cả người chưa trả tiền với tổng bằng 0.
+ORDER BY g.full_name ASC; -- 6. Tính tổng số tiền từng khách lưu trú đã thanh toán trong năm 2025 theo payment_date; hiển thị cả người chưa trả tiền với tổng bằng 0.
 
 SELECT g.guests_id, g.full_name
 FROM
@@ -119,7 +119,7 @@ FROM rooms r
 GROUP BY
     r.room_id,
     r.room_number
-ORDER BY cancelation_rate DESC, r.room_id ASC -- 9. Tính tỷ lệ hủy của từng phòng trong năm 2025: số lượt đặt phòng Cancelled chia tổng số lượt đặt phòng của năm, nhân 100. Làm tròn 2 chữ số thập phân; trả NULL nếu tổng bằng 0.
+ORDER BY cancelation_rate DESC, r.room_id ASC; -- 9. Tính tỷ lệ hủy của từng phòng trong năm 2025: số lượt đặt phòng Cancelled chia tổng số lượt đặt phòng của năm, nhân 100. Làm tròn 2 chữ số thập phân; trả NULL nếu tổng bằng 0.
 
 SELECT g.guests_id, g.full_name, COUNT(b.booking_id) as booking_count
 FROM guests g
